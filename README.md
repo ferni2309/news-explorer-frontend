@@ -1,16 +1,41 @@
-# React + Vite
+# News Explorer - Front-end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es el repositorio del front-end para el proyecto final de TripleTen. **News Explorer** es una plataforma interactiva donde los usuarios pueden buscar noticias de todo el mundo utilizando una API externa y guardar sus artículos favoritos en una cuenta personal protegida por autenticación.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+*   **React**: Biblioteca principal para la construcción de la interfaz de usuario.
+*   **Vite**: Herramienta de construcción (build tool) para un entorno de desarrollo rápido.
+*   **React Router Dom**: Gestión de rutas para la navegación entre la página principal y los artículos guardados.
+*   **BEM Methodology**: Organización de CSS siguiendo la convención Block Element Modifier para estilos escalables y mantenibles.
+*   **News API**: Integración con servicios de terceros para la recuperación de noticias en tiempo real.
+*   **ESLint (Airbnb Style Guide)**: Garantía de calidad de código siguiendo estándares profesionales.
 
-## React Compiler
+## Requisitos e Instalación
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Para ejecutar este proyecto localmente, asegúrate de tener instalado [Node.js](https://nodejs.org).
 
-## Expanding the ESLint configuration
+1. Clona este repositorio:
+   ```bash
+   git clone https://github.com/ferni2309/news-explorer-frontend
+   ```
+2. Instala las dependencias:
+   ```bash
+   npm install
+   ```
+3. Crea un archivo `.env` en la raíz y añade tu API Key:
+   ```text
+   VITE_NEWS_API_KEY=tu_clave_aqui
+   VITE_API_URL=http://localhost:3000
+   ```
+4. Inicia el servidor de desarrollo:
+   ```bash
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Estructura del Proyecto
+
+*   `/src/components`: Componentes reutilizables de React (Header, Footer, NewsCard, etc.).
+*   `/src/utils`: Servicios de API, funciones de utilidad y hooks personalizados.
+*   `/src/images`: Recursos gráficos y vectores optimizados.
+*   `/src/vendor`: Fuentes WOFF y estilos de normalización.

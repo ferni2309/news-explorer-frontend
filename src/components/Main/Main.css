@@ -1,0 +1,68 @@
+.hero {
+  background-image: url("../../images/banner.png"); /* Exporta el fondo de Figma */
+  background-size: cover;
+  background-position: center;
+  padding: 160px 0 80px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  max-width: 608px;
+}
+
+.hero__title {
+  font-family: "Roboto Slab", serif;
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 64px;
+  margin: 0 0 32px;
+}
+
+.hero__subtitle {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0 0 64px;
+}
+
+@media screen and (max-width: 1439px) {
+  .hero {
+    background-image: url('../../images/banner768.png');
+    padding: 104px 0 48px;
+  }
+  .hero__container {
+    width: 452px;
+  }
+  .hero__title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 16px;
+    width: 385px;
+  }
+  .hero__subtitle {
+    margin-bottom: 48px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero {
+    background-image: url('../../images/banner320.png');
+    padding: 86px 16px 32px;
+  }
+  .hero__container {
+    align-items: center;
+  }
+  .hero__title {
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0 0 16px;
+  }
+  .hero__subtitle {
+    font-size: 20px;
+    margin: 0 0 98px;
+    font-weight: 400;
+  }
+}
