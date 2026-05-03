@@ -11,6 +11,14 @@ Este es el repositorio del front-end para el proyecto final de TripleTen. **News
 *   **News API**: Integración con servicios de terceros para la recuperación de noticias en tiempo real.
 *   **ESLint (Airbnb Style Guide)**: Garantía de calidad de código siguiendo estándares profesionales.
 
+## Funcionalidades Principales
+
+*   **Búsqueda de Noticias**: Interfaz con validación de formularios para consultar noticias por palabras clave.
+*   **Autenticación de Usuarios**: Flujo completo de registro (Signup) e inicio de sesión (Signin) con validación en tiempo real.
+*   **Área Privada**: Uso de Rutas Protegidas (`ProtectedRoute`) para restringir el acceso a las noticias guardadas a usuarios no logueados.
+*   **Persistencia**: Integración con un Back-end personalizado para guardar y eliminar artículos, además de almacenamiento local (`localStorage`) para mantener la sesión y los resultados de búsqueda al refrescar.
+*   **Diseño Responsivo**: Adaptación completa para dispositivos móviles, tablets y escritorio.
+
 ## Requisitos e Instalación
 
 Para ejecutar este proyecto localmente, asegúrate de tener instalado [Node.js](https://nodejs.org).
@@ -39,3 +47,6 @@ Para ejecutar este proyecto localmente, asegúrate de tener instalado [Node.js](
 *   `/src/utils`: Servicios de API, funciones de utilidad y hooks personalizados.
 *   `/src/images`: Recursos gráficos y vectores optimizados.
 *   `/src/vendor`: Fuentes WOFF y estilos de normalización.
+
+## Autor
+*   **Fernando Orozco Rodríguez** - *Desarrollador Full Stack*
