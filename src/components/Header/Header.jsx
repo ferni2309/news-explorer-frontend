@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Header.css";
 import Navigation from "../Navigation/Navigation";
 
-function Header({ isLoggedIn, onLoginClick }) {
+function Header({ isLoggedIn, onLoginClick, onLogout, currentUser }) {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
   const location = useLocation();
   const isSavedNews = location.pathname === "/saved-news";
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth >= 768) {
+        setIsMenuOpen(false);
+      }
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <header
@@ -32,6 +46,8 @@ function Header({ isLoggedIn, onLoginClick }) {
           isLoggedIn={isLoggedIn}
           isLight={isSavedNews}
           isMenuOpen={isMenuOpen}
+          onLogout={onLogout}
+          currentUser={currentUser}
           onLoginClick={() => {
             setIsMenuOpen(false);
             onLoginClick();

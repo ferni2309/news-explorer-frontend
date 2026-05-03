@@ -1,0 +1,35 @@
+.popup__container_type_success {
+    margin: auto 16px;
+    padding: 0;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+
+.popup__container_type_success .popup__close {
+    margin-right: 0;
+}
+
+.popup__content {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 36px;
+}
+
+.popup__title_success {
+  margin: 0 0 14px;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.popup__redirect-link {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+  color: #2F71E5;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.popup__redirect-link:hover {
+  opacity: 0.6;
+}

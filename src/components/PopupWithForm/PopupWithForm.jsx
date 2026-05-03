@@ -10,6 +10,7 @@ function PopupWithForm({
   buttonText,
   onRedirect,
   isValid,
+  onSubmit
 }) {
   useEffect(() => {
     if (!isOpen) return;
@@ -25,7 +26,7 @@ function PopupWithForm({
       <div className="popup__container" onClick={(e) => e.stopPropagation()}>
         <button className="popup__close" type="button" onClick={onClose} />
         <h2 className="popup__title">{title}</h2>
-        <form className="popup__form" name={name} noValidate>
+        <form className="popup__form" name={name} noValidate onSubmit={onSubmit}>
           {children}
           <span className="popup__error-message popup__error-message_general"></span>
           <button
@@ -39,7 +40,7 @@ function PopupWithForm({
         <p className="popup__redirect">
           o{" "}
           <span className="popup__redirect-link" onClick={onRedirect}>
-            Inscribirse
+            {name === 'login' ? 'Inscribirse' : 'Iniciar sesión'}
           </span>
         </p>
       </div>

@@ -1,9 +1,11 @@
 import React from 'react';
 import './SearchForm.css';
 
-function SearchForm() {
+function SearchForm({ onSearch }) {
+  const [keyword, setKeyword] = React.useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
+    onSearch(keyword);
   };
 
   return (
@@ -12,6 +14,7 @@ function SearchForm() {
         type="text" 
         className="search-form__input" 
         placeholder="Introduce un tema"
+        onChange={(e) => setKeyword(e.target.value)}
         required 
       />
       <button type="submit" className="search-form__button">

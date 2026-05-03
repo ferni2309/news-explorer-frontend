@@ -43,6 +43,7 @@
   align-items: center;
   gap: 15px;
   transition: background-color 0.3s;
+  overflow: visible;
 }
 
 .navigation__button_theme_light {
@@ -51,8 +52,10 @@
 }
 
 .navigation__logout-icon {
-  width: 18px;
-  height: 18px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .navigation_visible {
@@ -61,6 +64,9 @@
 }
 
 @media screen and (max-width: 1439px) {
+  .navigation__button {
+    gap: 13px;
+  }
   .navigation__link {
     font-size: 16px;
     padding-bottom: 20px;
@@ -79,7 +85,7 @@
   }
 
   .navigation__button {
-    display: block;
+    justify-content: center;
     width: 100%;
   }
 
@@ -102,9 +108,30 @@
     width: 100%;
   }
 
+  .navigation__list .navigation__item:nth-child(3) {
+    align-items: center;
+    width: 100%;
+  }
+
   .navigation__link {
     font-size: 18px;
     line-height: 56px;
     border: none !important;
+  }
+
+  .navigation__link_active {
+    color: #ffffff;
+  }
+
+  .navigation_visible .navigation__button_theme_light {
+    border: 1px solid #ffffff;
+  }
+
+  .navigation_visible .navigation__user-name {
+    color: #ffffff;
+  }
+
+  .navigation_visible .navigation__logout-icon {
+    filter: brightness(0) invert(1); /* Truco CSS para volver blanco un icono negro */
   }
 }

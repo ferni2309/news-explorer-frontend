@@ -4,7 +4,7 @@ import "./Navigation.css";
 import logoutWhite from "../../images/logout-white.svg";
 import logoutBlack from "../../images/logout-black.svg";
 
-function Navigation({ isLoggedIn, isLight, onLoginClick, isMenuOpen }) {
+function Navigation({ isLoggedIn, isLight, onLoginClick, isMenuOpen, onLogout, currentUser }) {
   return (
     <nav className={`navigation ${isMenuOpen ? "navigation_visible" : ""}`}>
       <ul className="navigation__list">
@@ -35,9 +35,9 @@ function Navigation({ isLoggedIn, isLight, onLoginClick, isMenuOpen }) {
         <li className="navigation__item">
           {isLoggedIn ? (
             <button
-              className={`navigation__button ${isLight ? "navigation__button_theme_light" : ""}`}
+              className={`navigation__button ${isLight ? "navigation__button_theme_light" : ""}`} onClick={onLogout}
             >
-              <span className="navigation__user-name">Reina</span>
+              <span className="navigation__user-name">{currentUser.name}</span>
               <img
                 src={isLight ? logoutBlack : logoutWhite}
                 alt="Cerrar sesión"

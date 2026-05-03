@@ -11,7 +11,7 @@ function Footer() {
       <nav className="footer__navigation">
         <ul className="footer__links">
           <li className="footer__list-item">
-            <Link to="/" className="footer__link">Inicio</Link>
+            <Link to="/" className="footer__link" onClick={() => window.scrollTo(0, 0)}>Inicio</Link>
           </li>
           <li className="footer__list-item">
             <a href="https://tripleten.com" className="footer__link" target="_blank" rel="noreferrer">
