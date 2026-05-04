@@ -1,0 +1,30 @@
+.search-error {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+  background-color: #F5F6F7;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.search-error__text {
+  max-width: 600px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b6bcbf;
+  text-align: center;
+  margin: 0;
+}
+
+@media screen and (max-width: 620px) {
+  .search-error {
+    padding: 40px 16px;
+  }
+  
+  .search-error__text {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}

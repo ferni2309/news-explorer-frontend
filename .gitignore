@@ -8,10 +8,16 @@ pnpm-debug.log*
 lerna-debug.log*
 
 clean
+_cacache
+.cache
 node_modules
 dist
 dist-ssr
 *.local
+
+# .gitignore
+.env
+.env.local
 
 # Editor directories and files
 .vscode/*

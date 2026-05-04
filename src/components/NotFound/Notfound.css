@@ -1,0 +1,32 @@
+.not-found {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 374px;
+  padding: 86px auto 80px;
+}
+
+.not-found__text {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #b6bcbf;
+  text-align: center;
+  max-width: 356px;
+}
+
+.not-found__title {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 31.5px auto 16px;
+}
+
+.not-found__icon {
+  background-image: url("../../images/not-found.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 82.5px;
+  width: 82.5px;
+}
