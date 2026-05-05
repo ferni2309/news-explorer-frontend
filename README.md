@@ -48,5 +48,13 @@ Para ejecutar este proyecto localmente, asegúrate de tener instalado [Node.js](
 *   `/src/images`: Recursos gráficos y vectores optimizados.
 *   `/src/vendor`: Fuentes WOFF y estilos de normalización.
 
+## Especificaciones TécnicasEntorno de desarrollo: 
+
+* Vite + React 19.Control de calidad: ESLint 8.57.1 con configuración de Airbnb, garantizando un código limpio y estandarizado.   Gestión de Estado: Uso intensivo de Hooks (useState, useEffect) y hooks personalizados para validación de formularios.
+
+* Scripts DisponiblesEn el directorio del proyecto, puedes ejecutar:npm run dev: Inicia el entorno de desarrollo local.npm run build: Compila la aplicación para producción en la carpeta dist.npm run lint: Ejecuta el linter para encontrar y corregir problemas de estilo en el código.
+
+* Estructura de código destacadaValidación: Sistema de validación de formularios centralizado en src/utils/useForm.js.Protección de Rutas: Implementación de ProtectedRoute para el manejo de acceso granular según el estado de autenticación; }""", node=1)/>>.
+
 ## Autor
 *   **Fernando Orozco Rodríguez** - *Desarrollador Full Stack*
